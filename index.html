@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGENTIUS - Deja de Planear IA. Empieza a Usarla.</title>
+    <meta name="description" content="Agentes autónomos que ejecutan por ti. ¿Tienes una idea? Lo convertimos en output real. Resultados en 30 días o menos.">
+    <meta name="keywords" content="agentes IA, automatización, inteligencia artificial, agentes autónomos, desarrollo web IA, lead generation IA">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">AGENTIUS</div>
+            <nav class="nav">
+                <a href="#resultados">RESULTADOS</a>
+                <a href="#agentes">AGENTES</a>
+                <a href="#contacto">CONTACTO</a>
+                <a href="#formulario" class="cta-header">AGENDA TU SPRINT</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section v2.0 -->
+    <section class="hero-v2">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="typing-text">DEJA DE PLANEAR IA.</span><br>
+                        <span class="typing-text-2">EMPIEZA A USARLA.</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Agentes autónomos que ejecutan por ti.<br>
+                        ¿Tienes una idea? Lo convertimos en output real.
+                    </p>
+                    <p class="hero-tension">
+                        Mientras tú evalúas opciones, tus competidores ya están automatizando.<br>
+                        No necesitas un equipo de IA. Necesitas agentes que trabajen.
+                    </p>
+                    <div class="hero-ctas">
+                        <a href="#formulario" class="cta-primary">AGENDA TU SPRINT →</a>
+                        <a href="#agentes" class="cta-secondary">Ver Agentes en Acción</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <img src="agentius_v2_hero_animation.png" alt="Agentes IA en acción" class="hero-image">
+                    <div class="live-metrics">
+                        <div class="metric">
+                            <span class="metric-label">AGENTES ACTIVOS:</span>
+                            <span class="metric-value" id="active-agents">127</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">TAREAS COMPLETADAS HOY:</span>
+                            <span class="metric-value" id="tasks-completed">2,847</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">HORAS AHORRADAS:</span>
+                            <span class="metric-value" id="hours-saved">15,392</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resultados en 30 días -->
+    <section id="resultados" class="resultados">
+        <div class="container">
+            <h2 class="section-title">
+                RESULTADOS EN 30 DÍAS O MENOS<br>
+                <span class="subtitle">NO MÁS ROADMAPS DE 6 MESES</span>
+            </h2>
+            <p class="section-intro">
+                ¿Cuánto tiempo más vas a planear en lugar de ejecutar?<br><br>
+                No más "fases de descubrimiento" de 3 meses.<br>
+                No más "roadmaps" que nunca se cumplen.<br>
+                No más reuniones sobre reuniones.<br><br>
+                <strong>Agentes que entregan output real en semanas, no trimestres.</strong>
+            </p>
+
+            <div class="sprints-grid">
+                <div class="sprint-card">
+                    <h3>AUTOMATIZACIÓN EN 7-14 DÍAS</h3>
+                    <div class="sprint-details">
+                        <p><strong>Input:</strong> Tu proceso manual actual</p>
+                        <p><strong>Output:</strong> Workflow automatizado funcionando</p>
+                        <p><strong>Herramientas:</strong> Zapier + IA + APIs</p>
+                        <p><strong>Garantía:</strong> Ahorro de 10+ horas semanales</p>
+                    </div>
+                    <div class="testimonial">
+                        "Automatizamos su proceso de ventas en 10 días."
+                    </div>
+                    <a href="#formulario" class="sprint-cta">EMPEZAR MI SPRINT</a>
+                </div>
+
+                <div class="sprint-card">
+                    <h3>LEAD MACHINE EN 14-21 DÍAS</h3>
+                    <div class="sprint-details">
+                        <p><strong>Input:</strong> Tu perfil de cliente ideal</p>
+                        <p><strong>Output:</strong> Sistema de generación de leads</p>
+                        <p><strong>Herramientas:</strong> IA + CRM + Email automation</p>
+                        <p><strong>Garantía:</strong> 50+ leads calificados/mes</p>
+                    </div>
+                    <div class="testimonial">
+                        "El CEO nunca pidió avances. Solo vio leads llegar."
+                    </div>
+                    <a href="#formulario" class="sprint-cta">EMPEZAR MI SPRINT</a>
+                </div>
+
+                <div class="sprint-card">
+                    <h3>SITIO WEB EN 3-7 DÍAS</h3>
+                    <div class="sprint-details">
+                        <p><strong>Input:</strong> Tu idea de negocio</p>
+                        <p><strong>Output:</strong> Sitio web funcional + SEO</p>
+                        <p><strong>Herramientas:</strong> IA + React + Deploy</p>
+                        <p><strong>Garantía:</strong> Sitio live en menos de 1 semana</p>
+                    </div>
+                    <div class="testimonial">
+                        "De 0 a página web en 72h con 2 agentes."
+                    </div>
+                    <a href="#formulario" class="sprint-cta">EMPEZAR MI SPRINT</a>
+                </div>
+            </div>
+
+            <!-- Formulario inline en resultados -->
+            <div class="inline-form">
+                <h3>¿LISTO PARA TU PRIMER SPRINT?</h3>
+                <form class="contact-form" id="sprint-form">
+                    <input type="text" name="nombre" placeholder="Tu nombre" required>
+                    <textarea name="objetivo" placeholder="¿Qué quieres lograr con IA? Ej: Automatizar mi proceso de ventas" required></textarea>
+                    <input type="email" name="email" placeholder="tu@empresa.com" required>
+                    <button type="submit" class="form-cta">LANZAR MI PRIMER AGENTE →</button>
+                </form>
+                <p class="form-support">Respuesta en menos de 2 horas. Primera consulta sin costo.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Agentes Favoritos -->
+    <section id="agentes" class="agentes">
+        <div class="container">
+            <h2 class="section-title">AGENTES FAVORITOS</h2>
+            <p class="section-intro">Casos reales. Resultados medibles. Agentes que ya están trabajando.</p>
+
+            <div class="agentes-grid">
+                <div class="agente-card" data-agente="reporting">
+                    <img src="agentius_v2_reporting_agent.png" alt="Reporting Agent" class="agente-image">
+                    <h3>REPORTING AGENT</h3>
+                    <div class="agente-stats">
+                        <p><strong>Tiempo:</strong> 5-7 días</p>
+                        <p><strong>Herramientas:</strong> Google Analytics + GPT + Sheets</p>
+                        <p><strong>Output:</strong> Dashboard automatizado + reportes semanales</p>
+                        <p><strong>Resultado:</strong> 15 horas/mes ahorradas en reportes</p>
+                    </div>
+                    <div class="agente-testimonial">
+                        "Nunca más perdí tiempo haciendo reportes manuales."
+                    </div>
+                    <a href="#formulario" class="agente-cta">QUIERO ESTE AGENTE</a>
+                </div>
+
+                <div class="agente-card" data-agente="lead-generator">
+                    <img src="agentius_v2_lead_generator.png" alt="Lead Generator" class="agente-image">
+                    <h3>LEAD GENERATOR</h3>
+                    <div class="agente-stats">
+                        <p><strong>Tiempo:</strong> 10-14 días</p>
+                        <p><strong>Herramientas:</strong> LinkedIn + Email + CRM</p>
+                        <p><strong>Output:</strong> Pipeline de 100+ leads/mes</p>
+                        <p><strong>Resultado:</strong> 300% aumento en leads calificados</p>
+                    </div>
+                    <div class="agente-testimonial">
+                        "Pasamos de 10 leads/mes a 120 leads/mes."
+                    </div>
+                    <a href="#formulario" class="agente-cta">QUIERO ESTE AGENTE</a>
+                </div>
+
+                <div class="agente-card" data-agente="site-builder">
+                    <img src="agentius_v2_site_builder.png" alt="Site Builder" class="agente-image">
+                    <h3>SITE BUILDER</h3>
+                    <div class="agente-stats">
+                        <p><strong>Tiempo:</strong> 3-5 días</p>
+                        <p><strong>Herramientas:</strong> IA + React + Vercel</p>
+                        <p><strong>Output:</strong> Sitio responsive + SEO + Analytics</p>
+                        <p><strong>Resultado:</strong> Live en 72 horas</p>
+                    </div>
+                    <div class="agente-testimonial">
+                        "Lanzamos nuestro MVP en un fin de semana."
+                    </div>
+                    <a href="#formulario" class="agente-cta">QUIERO ESTE AGENTE</a>
+                </div>
+
+                <div class="agente-card" data-agente="ops-streamliner">
+                    <img src="agentius_v2_ops_streamliner.png" alt="Ops Streamliner" class="agente-image">
+                    <h3>OPS STREAMLINER</h3>
+                    <div class="agente-stats">
+                        <p><strong>Tiempo:</strong> 7-10 días</p>
+                        <p><strong>Herramientas:</strong> Zapier + APIs + Notion</p>
+                        <p><strong>Output:</strong> 5 procesos automatizados</p>
+                        <p><strong>Resultado:</strong> 25 horas/semana ahorradas</p>
+                    </div>
+                    <div class="agente-testimonial">
+                        "Mi equipo se enfoca en estrategia, no en tareas."
+                    </div>
+                    <a href="#formulario" class="agente-cta">QUIERO ESTE AGENTE</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Objeciones -->
+    <section class="objeciones">
+        <div class="container">
+            <div class="objeciones-grid">
+                <div class="objecion">
+                    <h3>"ES MUY CARO"</h3>
+                    <p>¿CUÁNTO TE CUESTA NO AUTOMATIZAR?</p>
+                    <p>Un empleado: $50,000/año + beneficios + gestión<br>
+                    Un agente: $5,000 una vez + trabaja 24/7</p>
+                    <p><strong>¿Cuál es más caro realmente?</strong></p>
+                </div>
+
+                <div class="objecion">
+                    <h3>"ES MUY COMPLEJO"</h3>
+                    <p>¿SABES QUÉ ES COMPLEJO?</p>
+                    <p>Gestionar 10 herramientas manualmente.<br>
+                    Hacer reportes cada semana.<br>
+                    Seguir leads a mano.</p>
+                    <p><strong>¿Sabes qué es simple? Decir qué quieres y que suceda.</strong></p>
+                </div>
+
+                <div class="objecion">
+                    <h3>"NO CONFÍO EN IA"</h3>
+                    <p>NO CONFÍAS EN IA QUE NO CONTROLAS.</p>
+                    <p>Estos agentes:<br>
+                    ✓ Trabajan con TUS reglas<br>
+                    ✓ Usan TUS datos<br>
+                    ✓ Siguen TUS objetivos</p>
+                    <p><strong>Tú tienes el control. Ellos hacen el trabajo.</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulario Principal -->
+    <section id="formulario" class="formulario-principal">
+        <div class="container">
+            <h2 class="form-title">LANZA TU PRIMER AGENTE</h2>
+            <div class="form-container">
+                <form class="main-contact-form" id="main-form">
+                    <div class="form-group">
+                        <input type="text" name="nombre" placeholder="Tu nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="objetivo" placeholder="¿Qué proceso quieres automatizar? Ej: Generar leads automáticamente para mi consultora" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="tu@empresa.com" required>
+                    </div>
+                    <button type="submit" class="main-form-cta">EMPEZAR MI SPRINT →</button>
+                </form>
+                <div class="form-benefits">
+                    <p>✓ Respuesta en menos de 2 horas</p>
+                    <p>✓ Primera consulta sin costo</p>
+                    <p>✓ Solo tomamos 5 proyectos nuevos por mes</p>
+                    <p>✓ Próximo slot disponible: <span id="next-slot">15 Enero 2025</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Urgencia -->
+    <section class="urgencia">
+        <div class="container">
+            <div class="urgencia-content">
+                <h2>MIENTRAS LEES ESTO:</h2>
+                <div class="urgencia-stats">
+                    <div class="urgencia-stat">
+                        <span class="stat-number" id="agents-working">3</span>
+                        <span class="stat-label">agentes están ejecutando tareas</span>
+                    </div>
+                    <div class="urgencia-stat">
+                        <span class="stat-number" id="processes-automated">12</span>
+                        <span class="stat-label">procesos se automatizaron hoy</span>
+                    </div>
+                    <div class="urgencia-stat">
+                        <span class="stat-number">6</span>
+                        <span class="stat-label">meses de ventaja tiene tu competencia</span>
+                    </div>
+                </div>
+                <p class="urgencia-question">¿Cuándo vas a empezar?</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <div class="logo">AGENTIUS</div>
+                    <p>Sistema autónomo de agentes IA</p>
+                </div>
+                <div class="footer-right">
+                    <p>© 2025 AI Agency | Powered by: <a href="https://www.agentius.ai">Agentius</a></p>
+                </div>
+            </div>
+            <div class="status-terminal">
+                <div class="terminal-line">AGENTIUS_STATUS: ONLINE</div>
+                <div class="terminal-line">TIMESTAMP: <span id="timestamp"></span></div>
+                <div class="terminal-line">AGENTS: ACTIVE</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CTA Sticky Bar -->
+    <div class="sticky-cta" id="sticky-cta">
+        <div class="sticky-content">
+            <span class="sticky-text">💬 Lanza tu primer agente →</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
