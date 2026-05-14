@@ -102,11 +102,24 @@ img {
 }
 
 .brand-mark {
-    width: 14px;
-    height: 14px;
-    border-radius: 2px;
-    background: var(--authority);
-    box-shadow: 12px 0 0 rgba(45, 53, 204, 0.18);
+    width: 34px;
+    height: 34px;
+    overflow: hidden;
+    display: inline-flex;
+    align-items: flex-start;
+    justify-content: center;
+    border-radius: 4px;
+}
+
+.brand-mark img {
+    width: 70px;
+    height: 70px;
+    max-width: none;
+    transform: translate(-18px, -8px);
+}
+
+.brand-wordmark {
+    color: var(--action);
 }
 
 .site-nav {
