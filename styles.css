@@ -190,6 +190,150 @@ img {
     gap: 48px;
 }
 
+.insights-hero {
+    position: relative;
+    padding: 88px 0 42px;
+    background:
+        linear-gradient(135deg, rgba(45, 53, 204, 0.08), transparent 34%),
+        linear-gradient(315deg, rgba(249, 115, 22, 0.1), transparent 38%),
+        var(--surface);
+}
+
+.insights-hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.88fr) minmax(360px, 0.52fr);
+    gap: 42px;
+    align-items: end;
+}
+
+.insights-hero h1 {
+    margin: 14px 0 18px;
+    max-width: 11ch;
+    font-size: clamp(3.4rem, 9vw, 8.5rem);
+    line-height: 0.9;
+    letter-spacing: -0.07em;
+}
+
+.insights-hero p {
+    max-width: 720px;
+    margin: 0;
+    color: var(--muted);
+    font-size: clamp(1.05rem, 1.7vw, 1.35rem);
+}
+
+.doctrine-note {
+    border: 1px solid var(--line);
+    background: var(--ink);
+    color: var(--surface);
+    padding: 26px;
+}
+
+.doctrine-note span {
+    display: block;
+    margin-bottom: 18px;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--action);
+}
+
+.doctrine-note strong {
+    display: block;
+    font-size: 1.35rem;
+    line-height: 1.12;
+    letter-spacing: -0.04em;
+}
+
+.insights-section {
+    padding: 56px 0 96px;
+}
+
+.insights-list {
+    display: grid;
+    gap: 18px;
+}
+
+.insight-brief {
+    display: grid;
+    grid-template-columns: 96px minmax(0, 0.82fr) minmax(260px, 0.48fr);
+    gap: 24px;
+    align-items: start;
+    padding: 28px;
+    border: 1px solid var(--line);
+    background: var(--surface);
+}
+
+.insight-brief-number {
+    font-family: "IBM Plex Mono", monospace;
+    color: var(--authority);
+    font-size: 0.88rem;
+}
+
+.insight-brief h2 {
+    margin: 0 0 14px;
+    font-size: clamp(1.8rem, 3.4vw, 3.2rem);
+    line-height: 0.98;
+    letter-spacing: -0.055em;
+}
+
+.insight-brief p {
+    margin: 0;
+    color: var(--muted);
+}
+
+.insight-points {
+    display: grid;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.insight-points li {
+    position: relative;
+    padding: 12px 14px 12px 32px;
+    border: 1px solid var(--line);
+    background: var(--surface-strong);
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.insight-points li::before {
+    content: "";
+    position: absolute;
+    left: 14px;
+    top: 18px;
+    width: 7px;
+    height: 7px;
+    background: var(--action);
+}
+
+.insights-cta {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) auto;
+    gap: 24px;
+    align-items: center;
+    margin-top: 28px;
+    padding: 28px;
+    border: 1px solid var(--line);
+    background:
+        linear-gradient(135deg, rgba(45, 53, 204, 0.1), rgba(249, 115, 22, 0.08)),
+        var(--surface);
+}
+
+.insights-cta h2 {
+    margin: 0 0 8px;
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+    line-height: 1;
+    letter-spacing: -0.045em;
+}
+
+.insights-cta p {
+    margin: 0;
+    color: var(--muted);
+}
+
 .systems-map {
     position: absolute;
     inset: 0;
@@ -1250,7 +1394,10 @@ img {
     .ladder,
     .proof-panel,
     .contact-grid,
-    .process-grid {
+    .process-grid,
+    .insights-hero-grid,
+    .insight-brief,
+    .insights-cta {
         grid-template-columns: 1fr;
     }
 
@@ -1306,6 +1453,9 @@ img {
     .control-topology,
     .practice-panel,
     .practice-table,
+    .insights-hero-grid,
+    .insight-brief,
+    .insights-cta,
     .autonomy-table,
     .authority-table {
         grid-template-columns: 1fr;
