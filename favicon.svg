@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Agentius">
+  <rect width="64" height="64" rx="12" fill="#ffffff"/>
+  <path d="M15 51 29 13c1.1-3 4.9-3 6 0l14 38h-9l-3.2-9.2H27.1L24 51h-9Z" fill="#F97316"/>
+  <path d="M29.5 34h5l-2.5-7.4L29.5 34Z" fill="#ffffff"/>
+  <circle cx="43" cy="18" r="5" fill="#2D35CC"/>
+</svg>
