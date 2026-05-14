@@ -132,6 +132,31 @@ img {
     color: var(--ink);
 }
 
+.language-switch {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    padding: 3px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.language-switch a {
+    min-width: 34px;
+    padding: 6px 8px;
+    border-radius: 4px;
+    text-align: center;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.74rem;
+    color: var(--muted);
+}
+
+.language-switch a[aria-current="page"] {
+    background: var(--authority);
+    color: #fff;
+}
+
 .nav-cta {
     padding: 11px 18px;
     border-radius: 6px;
@@ -822,6 +847,10 @@ img {
         border: 1px solid var(--line);
         background: rgba(255, 255, 255, 0.98);
         box-shadow: var(--shadow);
+    }
+
+    .language-switch {
+        width: 100%;
     }
 
     .site-nav.is-open {

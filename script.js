@@ -5,8 +5,10 @@ const rotateItems = Array.from(document.querySelectorAll("[data-rotate-item]"));
 const revealNodes = document.querySelectorAll(".reveal");
 const yearNode = document.getElementById("year");
 const contactForm = document.getElementById("contact-form");
+const languageLinks = document.querySelectorAll("[data-language-choice]");
 
 const config = window.AGENTIUS_CONFIG || {};
+const pageLanguage = document.documentElement.lang || "en";
 const notifyEmail = config.notifyEmail || "fmfg@agentius.ai";
 const projectRef = config.projectRef || "awhpvrlzovcexopsejkt";
 const functionName = config.functionName || "lead-capture";
@@ -28,6 +30,12 @@ if (navToggle && siteNav) {
         });
     });
 }
+
+languageLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+        localStorage.setItem("agentius_language", link.dataset.languageChoice);
+    });
+});
 
 if (rotateHost && rotateItems.length > 0) {
     let activeIndex = 0;
@@ -60,8 +68,12 @@ if (yearNode) {
     yearNode.textContent = String(new Date().getFullYear());
 }
 
+function t(en, es) {
+    return pageLanguage.toLowerCase().startsWith("es") ? es : en;
+}
+
 function buildMailtoUrl({ name, company, workflow, email }) {
-    const subject = `Agentius intro request - ${company || name || "New inquiry"}`;
+        const subject = `Agentius intro request - ${company || name || "New inquiry"}`;
     const body = [
         "New Agentius intro request",
         "",
@@ -139,16 +151,22 @@ if (contactForm) {
         };
 
         try {
-            showFormMessage("Submitting your request...");
+            showFormMessage(t("Submitting your request...", "Enviando tu solicitud..."));
             await submitLead(payload);
             contactForm.reset();
             showFormMessage(
-                "Request received. It has been queued for review and delivery."
+                t(
+                    "Request received. It has been queued for review and delivery.",
+                    "Solicitud recibida. Quedó en cola para revisión y seguimiento."
+                )
             );
         } catch (error) {
             if (fallbackToMailto) {
                 showFormMessage(
-                    "Direct delivery is not active yet. Opening an email draft as fallback.",
+                    t(
+                        "Direct delivery is not active yet. Opening an email draft as fallback.",
+                        "La entrega directa no está activa todavía. Abriendo un borrador de email como respaldo."
+                    ),
                     true
                 );
                 window.location.href = buildMailtoUrl(payload);
