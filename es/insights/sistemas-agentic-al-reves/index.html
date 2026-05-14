@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Most Agentic Systems Are Architected Backwards | Agentius Insights</title>
+    <meta name="description" content="Por qué los sistemas agentic enterprise deben ir de intención a política a autoridad a ejecución a evidencia, no de LLM a herramienta a logs.">
+    <meta property="og:title" content="Why Most Agentic Systems Are Architected Backwards">
+    <meta property="og:description" content="Una arquitectura práctica para ejecución IA gobernada.">
+    <meta property="og:type" content="article">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css?v=20260514-11">
+</head>
+<body><div class="page-shell">
+    <header class="site-header"><div class="shell"><a href="/es/" class="brand" aria-label="Agentius home"><span class="brand-mark" aria-hidden="true"><img src="/assets/agentius-logo-transparent.png" alt=""></span><span class="brand-wordmark">AGENTIUS</span></a><button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menú</button><nav class="site-nav" id="site-nav"><a href="/es/#problem">Problema</a><a href="/es/#architecture">Arquitectura</a><a href="/es/#authority">Autoridad</a><a href="/es/#process">Proceso</a><a href="/es/insights/" aria-current="page">Insights</a><span class="language-switch" aria-label="Selector de idioma"><a href="/es/insights/sistemas-agentic-al-reves/" data-language-choice="es" aria-current="page">ES</a><a href="/en/insights/agentic-systems-backwards/" data-language-choice="en">EN</a></span><a href="/es/#contact" class="nav-cta">Mapear autoridad</a></nav></div></header>
+    <main>
+        <section class="article-hero"><div class="shell article-hero-grid"><div class="reveal"><a class="article-back" href="/es/insights/">Volver a Insights</a><span class="section-kicker">Doctrina operacional 05</span><h1>Why Most Agentic Systems Are Architected Backwards</h1><p>El patrón default es simple: el modelo decide, la herramienta ejecuta y los logs explican después. Eso sirve para demos. Es al revés para operaciones enterprise.</p></div><aside class="article-meta-card reveal"><span>Patrón operativo</span><strong>Intención a política a autoridad a ejecución a evidencia.</strong></aside></div></section>
+        <section class="article-section"><div class="shell article-layout"><aside class="article-aside reveal"><span>Leer cuando</span><strong>Una arquitectura conecta output del modelo demasiado cerca de ejecución de herramientas.</strong></aside><article class="article-body reveal">
+            <h2>La arquitectura de demo</h2>
+            <p>Muchos sistemas agentic se construyen alrededor de una cadena directa: LLM decide, herramienta ejecuta, logs registran el resultado. Es atractivo porque se construye rápido y se demozea fácil. Muestra autonomía de forma clara.</p>
+            <p>Ese patrón se rompe cuando la acción tiene consecuencia operacional. Una arquitectura de demo optimiza capacidad. Una arquitectura enterprise debe optimizar legitimidad. No basta con que la acción fuera posible o útil. La organización debe saber si estaba permitida antes de que ocurriera.</p>
+            <h2>El centro faltante</h2>
+            <p>El centro faltante es autoridad. Entre intención del modelo y ejecución de herramienta debe existir una frontera de enforcement. Qué sistema se tocará, qué mutación se solicita, cuál es la clase de consecuencia, qué política aplica, si requiere escalamiento y qué evidencia es necesaria.</p>
+            <p>Sin esa capa, los logs se vuelven el principal artefacto de gobernanza. Pero los logs son retrospectivos. Pueden explicar una falla, no prevenir una ejecución no autorizada.</p>
+            <div class="article-callout"><p>La secuencia correcta no es LLM a ejecución a logs. Es intención a política a autoridad a ejecución a evidencia.</p></div>
+            <h2>Qué cambia en práctica</h2>
+            <p>En el patrón gobernado, el modelo sigue importando. Interpreta contexto y propone una acción. Pero la acción se normaliza en una forma que la organización puede evaluar. Un policy gate revisa autoridad. Las rutas de escalamiento se activan cuando corresponde. La ejecución ocurre solo dentro del límite permitido.</p>
+            <p>Esto hace el sistema menos mágico y más desplegable. Dirección lo entiende. Legal y compliance lo inspeccionan. Operaciones ve qué está bloqueado, escalado o resuelto. Ingeniería puede expandir autonomía sin expandir autoridad silenciosamente.</p>
+            <h2>La implicación estratégica</h2>
+            <p>Los sistemas agentic no ganarán enterprise solo por volverse más autónomos. Ganarán por volverse más gobernables. Las empresas que entiendan esto temprano podrán pasar de piloto a producción sin reconstruir el modelo de control.</p>
+            <p>Si la autoridad se pega después, se vuelve fricción. Si se diseña dentro del camino de ejecución, se vuelve la razón por la que el sistema puede tocar trabajo real.</p>
+            <div class="article-next"><a href="/es/insights/" class="button button-primary">Volver a Insights</a><a href="/es/#contact" class="button button-secondary">Mapear autoridad</a></div>
+        </article></div></section>
+    </main>
+    <footer class="site-footer"><div class="shell footer-grid"><p>Agentius. Operaciones agentic gobernadas para workflows de alto impacto.</p><p>Copyright <span id="year"></span></p></div></footer>
+</div><script src="/site-config.js"></script><script src="/script.js"></script></body></html>

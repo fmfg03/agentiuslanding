@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Most Agentic Systems Are Architected Backwards | Agentius Insights</title>
+    <meta name="description" content="Why enterprise agentic systems should move from intent to policy to authority to execution to evidence, not LLM to tool to logs.">
+    <meta property="og:title" content="Why Most Agentic Systems Are Architected Backwards">
+    <meta property="og:description" content="A practical architecture for governed AI execution.">
+    <meta property="og:type" content="article">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css?v=20260514-11">
+</head>
+<body>
+    <div class="page-shell">
+        <header class="site-header"><div class="shell"><a href="/en/" class="brand" aria-label="Agentius home"><span class="brand-mark" aria-hidden="true"><img src="/assets/agentius-logo-transparent.png" alt=""></span><span class="brand-wordmark">AGENTIUS</span></a><button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button><nav class="site-nav" id="site-nav"><a href="/en/#problem">Problem</a><a href="/en/#architecture">Architecture</a><a href="/en/#authority">Authority</a><a href="/en/#process">Process</a><a href="/en/insights/" aria-current="page">Insights</a><span class="language-switch" aria-label="Language selector"><a href="/es/insights/sistemas-agentic-al-reves/" data-language-choice="es">ES</a><a href="/en/insights/agentic-systems-backwards/" data-language-choice="en" aria-current="page">EN</a></span><a href="/en/#contact" class="nav-cta">Map Authority</a></nav></div></header>
+
+        <main>
+            <section class="article-hero">
+                <div class="shell article-hero-grid">
+                    <div class="reveal">
+                        <a class="article-back" href="/en/insights/">Back to Insights</a>
+                        <span class="section-kicker">Operational doctrine 05</span>
+                        <h1>Why Most Agentic Systems Are Architected Backwards</h1>
+                        <p>The default pattern is simple: the model decides, the tool executes, and logs explain what happened later. That is acceptable for demos. It is backwards for enterprise operations.</p>
+                    </div>
+                    <aside class="article-meta-card reveal"><span>Operating pattern</span><strong>Intent to policy to authority to execution to evidence.</strong></aside>
+                </div>
+            </section>
+
+            <section class="article-section">
+                <div class="shell article-layout">
+                    <aside class="article-aside reveal"><span>Read this when</span><strong>An agent architecture connects model output too closely to tool execution.</strong></aside>
+                    <article class="article-body reveal">
+                        <h2>The demo architecture</h2>
+                        <p>Many agentic systems are built around a direct chain: LLM decides, tool executes, logs record the outcome. This architecture is attractive because it is fast to build and easy to demonstrate. It shows autonomy clearly. The agent receives a task, chooses a tool, performs an action, and reports success.</p>
+                        <p>That pattern breaks when the action has operational consequence. A demo architecture optimizes for capability. Enterprise architecture has to optimize for legitimacy. It is not enough that the action was possible or useful. The organization must know whether the action was permitted before it happened.</p>
+
+                        <h2>The missing middle</h2>
+                        <p>The missing middle is authority. Between model intent and tool execution, there should be an enforcement boundary that evaluates the action. What system will be touched? What mutation is being requested? What is the consequence class? What policy applies? Does this require escalation? What evidence is required?</p>
+                        <p>Without that middle layer, logs become the main governance artifact. But logs are retrospective. They may help explain a failure, but they do not prevent unauthorized execution. Enterprise AI needs pre-execution controls, not only post-execution observability.</p>
+
+                        <div class="article-callout"><p>The right sequence is not LLM to execution to logs. It is intent to policy to authority to execution to evidence.</p></div>
+
+                        <h2>What changes in practice</h2>
+                        <p>In the governed pattern, the model still matters. It interprets context and proposes an action. But the action is normalized into a form the organization can evaluate. A policy gate checks authority. Escalation routes trigger where needed. Execution happens only inside the permitted boundary. Evidence is persisted as part of the operating record.</p>
+                        <p>This makes the system less magical and more deployable. Business leaders can understand it. Legal and compliance teams can inspect it. Operators can see where work is blocked, escalated, or completed. Engineering teams can expand autonomy without silently expanding authority.</p>
+
+                        <h2>The strategic implication</h2>
+                        <p>Agentic systems will not win in the enterprise simply by becoming more autonomous. They will win by becoming more governable. The companies that understand this early will build workflows that can move from pilot to production without rebuilding the control model from scratch.</p>
+                        <p>That is why architecture matters. If authority is bolted on later, it becomes friction. If authority is designed into the execution path, it becomes the reason the system can be trusted with real work.</p>
+
+                        <div class="article-next"><a href="/en/insights/" class="button button-primary">Back to Insights</a><a href="/en/#contact" class="button button-secondary">Map authority surface</a></div>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer"><div class="shell footer-grid"><p>Agentius. Governed agentic operations for high-consequence workflows.</p><p>Copyright <span id="year"></span></p></div></footer>
+    </div>
+    <script src="/site-config.js"></script><script src="/script.js"></script>
+</body>
+</html>
