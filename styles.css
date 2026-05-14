@@ -1,19 +1,23 @@
 :root {
-    --bg: #f6f7f8;
+    --bg: #ffffff;
     --surface: #ffffff;
-    --surface-strong: #eceff3;
+    --surface-strong: #f4f6f8;
     --ink: #101216;
     --muted: #5d6673;
     --line: rgba(16, 18, 22, 0.12);
     --line-strong: rgba(16, 18, 22, 0.24);
-    --accent: #0b7a5b;
-    --accent-soft: rgba(11, 122, 91, 0.1);
-    --warning: #b7791f;
+    --action: #f97316;
+    --action-soft: rgba(249, 115, 22, 0.1);
+    --authority: #2d35cc;
+    --authority-soft: rgba(45, 53, 204, 0.1);
+    --accent: var(--action);
+    --accent-soft: var(--action-soft);
+    --warning: #c26a12;
     --danger: #a63d40;
     --dark: #111318;
     --dark-soft: #191d24;
-    --dark-line: rgba(246, 247, 248, 0.14);
-    --success: #0b7a5b;
+    --dark-line: rgba(255, 255, 255, 0.14);
+    --success: #2d35cc;
     --shadow: 0 18px 44px rgba(16, 18, 22, 0.08);
 }
 
@@ -71,7 +75,7 @@ img {
     top: 0;
     z-index: 20;
     backdrop-filter: blur(16px);
-    background: rgba(246, 247, 248, 0.88);
+    background: rgba(255, 255, 255, 0.9);
     border-bottom: 1px solid rgba(23, 22, 22, 0.08);
 }
 
@@ -94,14 +98,15 @@ img {
     font-weight: 700;
     letter-spacing: 0.08em;
     font-size: 0.92rem;
+    color: var(--action);
 }
 
 .brand-mark {
     width: 14px;
     height: 14px;
     border-radius: 2px;
-    background: var(--accent);
-    box-shadow: 12px 0 0 rgba(23, 22, 22, 0.16);
+    background: var(--authority);
+    box-shadow: 12px 0 0 rgba(45, 53, 204, 0.18);
 }
 
 .site-nav {
@@ -136,9 +141,9 @@ img {
     align-items: center;
     overflow: hidden;
     background:
-        linear-gradient(rgba(246, 247, 248, 0.92), rgba(246, 247, 248, 0.72)),
-        repeating-linear-gradient(90deg, rgba(16, 18, 22, 0.08) 0 1px, transparent 1px 96px),
-        repeating-linear-gradient(0deg, rgba(16, 18, 22, 0.06) 0 1px, transparent 1px 72px);
+        linear-gradient(rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0.78)),
+        repeating-linear-gradient(90deg, rgba(45, 53, 204, 0.08) 0 1px, transparent 1px 96px),
+        repeating-linear-gradient(0deg, rgba(16, 18, 22, 0.05) 0 1px, transparent 1px 72px);
 }
 
 .hero-stack {
@@ -171,8 +176,8 @@ img {
 .map-gate {
     left: 62%;
     top: 42%;
-    border-color: rgba(11, 122, 91, 0.42);
-    color: var(--accent);
+    border-color: rgba(45, 53, 204, 0.44);
+    color: var(--authority);
     background: rgba(255, 255, 255, 0.88);
 }
 
@@ -200,7 +205,7 @@ img {
     position: absolute;
     height: 1px;
     transform-origin: left center;
-    background: rgba(16, 18, 22, 0.18);
+    background: rgba(45, 53, 204, 0.2);
 }
 
 .line-a {
@@ -255,7 +260,7 @@ img {
     border: 1px solid var(--line);
     border-radius: 999px;
     background: rgba(255, 255, 255, 0.48);
-    color: var(--accent);
+    color: var(--authority);
     overflow: hidden;
 }
 
@@ -321,8 +326,8 @@ img {
 }
 
 .button-primary {
-    background: var(--accent);
-    color: #fff7f2;
+    background: var(--action);
+    color: #fff;
 }
 
 .button-secondary {
@@ -360,7 +365,7 @@ img {
     width: 8px;
     height: 8px;
     border-radius: 1px;
-    background: var(--accent);
+    background: var(--authority);
 }
 
 .service-card,
@@ -520,8 +525,8 @@ img {
 
 .comparison-head.emphasis,
 .comparison-cell.emphasis {
-    background: rgba(11, 122, 91, 0.14);
-    color: #f5fff9;
+    background: rgba(45, 53, 204, 0.16);
+    color: #f4f6ff;
 }
 
 .flow-grid {
@@ -584,7 +589,7 @@ img {
 
 .flow-step.active::before,
 .flow-column.governed .flow-step::before {
-    background: var(--accent);
+    background: var(--authority);
 }
 
 .actor-section {
@@ -625,7 +630,7 @@ img {
 }
 
 .autonomy-row strong {
-    color: var(--accent);
+    color: var(--authority);
     border-left: 1px solid var(--line);
 }
 
@@ -738,9 +743,9 @@ img {
     margin-top: 14px;
     padding: 14px 16px;
     border-radius: 6px;
-    background: rgba(59, 127, 99, 0.14);
-    border: 1px solid rgba(59, 127, 99, 0.35);
-    color: #cde6da;
+    background: rgba(45, 53, 204, 0.16);
+    border: 1px solid rgba(45, 53, 204, 0.38);
+    color: #dfe2ff;
 }
 
 .site-footer {
@@ -803,7 +808,7 @@ img {
         padding: 18px;
         border-radius: 20px;
         border: 1px solid var(--line);
-        background: rgba(251, 247, 240, 0.96);
+        background: rgba(255, 255, 255, 0.98);
         box-shadow: var(--shadow);
     }
 
