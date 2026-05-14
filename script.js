@@ -91,8 +91,8 @@ function showFormMessage(message, isError = false) {
     status.textContent = message;
 
     if (isError) {
-        status.style.background = "rgba(183, 85, 45, 0.14)";
-        status.style.borderColor = "rgba(183, 85, 45, 0.35)";
+        status.style.background = "rgba(166, 61, 64, 0.14)";
+        status.style.borderColor = "rgba(166, 61, 64, 0.35)";
         status.style.color = "#ffd9cc";
     }
 
