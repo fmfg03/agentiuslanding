@@ -994,7 +994,7 @@ img {
     grid-template-columns: repeat(6, minmax(0, 1fr));
     border: 1px solid var(--line);
     background: var(--surface);
-    margin-bottom: 72px;
+    margin-bottom: 22px;
 }
 
 .control-node {
@@ -1028,6 +1028,78 @@ img {
 .control-node strong {
     font-size: 1rem;
     line-height: 1.2;
+}
+
+.practice-panel {
+    display: grid;
+    grid-template-columns: minmax(280px, 0.72fr) minmax(0, 1.28fr);
+    border: 1px solid var(--line);
+    background: var(--surface);
+    margin-bottom: 72px;
+}
+
+.practice-heading {
+    padding: 30px;
+    border-right: 1px solid var(--line);
+    background:
+        linear-gradient(180deg, rgba(45, 53, 204, 0.06), rgba(255, 255, 255, 0)),
+        var(--surface);
+}
+
+.practice-heading h3 {
+    margin: 10px 0 18px;
+    font-size: clamp(1.75rem, 2.6vw, 2.75rem);
+    line-height: 1.03;
+    letter-spacing: -0.045em;
+}
+
+.practice-heading p {
+    margin: 0;
+    color: var(--muted);
+}
+
+.practice-table {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(180px, 0.55fr) minmax(0, 1fr);
+}
+
+.practice-head {
+    padding: 18px 20px;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+    background: var(--surface-strong);
+    border-left: 1px solid var(--line);
+}
+
+.practice-head:first-child {
+    border-left: 0;
+}
+
+.practice-row {
+    display: contents;
+}
+
+.practice-row span,
+.practice-row strong {
+    padding: 18px 20px;
+    border-top: 1px solid var(--line);
+    border-left: 1px solid var(--line);
+}
+
+.practice-row span:first-child {
+    border-left: 0;
+    font-weight: 650;
+}
+
+.practice-row span:last-child {
+    color: var(--muted);
+}
+
+.practice-row strong {
+    color: var(--authority);
 }
 
 .use-case-strip {
@@ -1232,6 +1304,8 @@ img {
     .proof-pressure,
     .proof-flow,
     .control-topology,
+    .practice-panel,
+    .practice-table,
     .autonomy-table,
     .authority-table {
         grid-template-columns: 1fr;
@@ -1272,7 +1346,11 @@ img {
     .blast-item,
     .proof-copy,
     .proof-step,
-    .control-node {
+    .control-node,
+    .practice-heading,
+    .practice-head,
+    .practice-row span,
+    .practice-row strong {
         border-left: 0;
         border-right: 0;
         border-bottom: 1px solid var(--line);
@@ -1289,6 +1367,16 @@ img {
 
     .proof-step::after {
         display: none;
+    }
+
+    .practice-head:nth-child(2),
+    .practice-head:nth-child(3) {
+        display: none;
+    }
+
+    .practice-row {
+        display: grid;
+        grid-template-columns: 1fr;
     }
 
     .comparison-cell,
