@@ -1,0 +1,4 @@
+project_id = "awhpvrlzovcexopsejkt"
+
+[functions.lead-capture]
+verify_jwt = false
