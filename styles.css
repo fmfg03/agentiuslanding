@@ -689,7 +689,7 @@ img {
     grid-template-columns: minmax(140px, 0.6fr) minmax(0, 1.2fr) minmax(220px, 0.8fr);
     border: 1px solid var(--line);
     background: var(--surface);
-    margin-bottom: 72px;
+    margin-bottom: 28px;
 }
 
 .autonomy-head,
@@ -734,6 +734,175 @@ img {
 
 .authority-row span + span {
     border-left: 1px solid var(--line);
+}
+
+.authority-consequence-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(300px, 0.65fr);
+    gap: 18px;
+    align-items: stretch;
+    margin-bottom: 22px;
+}
+
+.authority-includes,
+.anti-pattern-card,
+.blast-radius {
+    border: 1px solid var(--line);
+    background: var(--surface);
+}
+
+.authority-includes {
+    padding: 28px;
+}
+
+.authority-includes h3,
+.anti-pattern-card h3,
+.blast-copy h3 {
+    margin: 10px 0 16px;
+    font-size: clamp(1.6rem, 2.3vw, 2.35rem);
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+}
+
+.authority-includes ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    padding: 0;
+    margin: 26px 0;
+    list-style: none;
+}
+
+.authority-includes li {
+    position: relative;
+    padding: 13px 14px 13px 34px;
+    border: 1px solid var(--line);
+    background: var(--surface-strong);
+    font-weight: 600;
+}
+
+.authority-includes li::before {
+    content: "";
+    position: absolute;
+    left: 14px;
+    top: 19px;
+    width: 8px;
+    height: 8px;
+    border-radius: 1px;
+    background: var(--authority);
+}
+
+.authority-thesis {
+    margin: 0;
+    padding-top: 18px;
+    border-top: 1px solid var(--line);
+    color: var(--ink);
+    font-size: 1.08rem;
+    font-weight: 700;
+}
+
+.anti-pattern-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 28px;
+    background:
+        linear-gradient(145deg, rgba(249, 115, 22, 0.12), rgba(45, 53, 204, 0.08)),
+        var(--surface);
+}
+
+.anti-pattern-card p {
+    margin: 0;
+    color: var(--muted);
+}
+
+.blast-radius {
+    display: grid;
+    grid-template-columns: minmax(260px, 0.64fr) minmax(0, 1.36fr);
+    margin-bottom: 72px;
+}
+
+.blast-copy {
+    padding: 28px;
+    border-right: 1px solid var(--line);
+}
+
+.blast-copy p {
+    margin: 0;
+    color: var(--muted);
+}
+
+.blast-scale {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.blast-item {
+    position: relative;
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 28px;
+    padding: 22px;
+    overflow: hidden;
+    border-left: 1px solid var(--line);
+}
+
+.blast-item:first-child {
+    border-left: 0;
+}
+
+.blast-item::before {
+    content: "";
+    position: absolute;
+    inset: auto 18px 18px auto;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    opacity: 0.18;
+    transform: scale(var(--impact-scale, 1));
+    background: var(--impact-color, var(--authority));
+}
+
+.blast-item span {
+    position: relative;
+    z-index: 1;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+.blast-item strong {
+    position: relative;
+    z-index: 1;
+    font-size: 1.05rem;
+    line-height: 1.2;
+}
+
+.impact-low {
+    --impact-scale: 0.72;
+    --impact-color: #2d35cc;
+}
+
+.impact-medium {
+    --impact-scale: 1;
+    --impact-color: #2d35cc;
+    background: rgba(45, 53, 204, 0.035);
+}
+
+.impact-high {
+    --impact-scale: 1.35;
+    --impact-color: #f97316;
+    background: rgba(249, 115, 22, 0.055);
+}
+
+.impact-critical {
+    --impact-scale: 1.78;
+    --impact-color: #d73b1f;
+    background: rgba(249, 115, 22, 0.1);
 }
 
 .use-case-strip {
@@ -932,6 +1101,9 @@ img {
     .signal-grid,
     .comparison-table,
     .flow-grid,
+    .authority-consequence-grid,
+    .blast-radius,
+    .blast-scale,
     .autonomy-table,
     .authority-table {
         grid-template-columns: 1fr;
@@ -966,6 +1138,13 @@ img {
     .authority-head:nth-child(2),
     .authority-head:nth-child(3) {
         display: none;
+    }
+
+    .blast-copy,
+    .blast-item {
+        border-left: 0;
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
     }
 
     .comparison-cell,
