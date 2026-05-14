@@ -102,20 +102,19 @@ img {
 }
 
 .brand-mark {
-    width: 34px;
-    height: 34px;
-    overflow: hidden;
+    width: 40px;
+    height: 40px;
     display: inline-flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     border-radius: 4px;
 }
 
 .brand-mark img {
-    width: 70px;
-    height: 70px;
-    max-width: none;
-    transform: translate(-18px, -8px);
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    object-position: center;
 }
 
 .brand-wordmark {
