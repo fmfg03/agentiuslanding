@@ -645,6 +645,36 @@ img {
     margin: 32px 0;
 }
 
+.powered-strip {
+    width: min(760px, 100%);
+    margin-top: 22px;
+    display: grid;
+    grid-template-columns: max-content minmax(0, 1fr);
+    align-items: center;
+    border: 1px solid var(--line);
+    background: rgba(255, 255, 255, 0.76);
+    box-shadow: inset 4px 0 0 var(--authority);
+}
+
+.powered-strip span,
+.powered-strip strong {
+    padding: 13px 16px;
+}
+
+.powered-strip span {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.74rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--authority);
+    border-right: 1px solid var(--line);
+}
+
+.powered-strip strong {
+    font-size: 0.96rem;
+    color: var(--ink);
+}
+
 .button {
     display: inline-flex;
     align-items: center;
@@ -1719,6 +1749,15 @@ img {
     .hero-actions,
     .footer-grid {
         flex-direction: column;
+    }
+
+    .powered-strip {
+        grid-template-columns: 1fr;
+    }
+
+    .powered-strip span {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
     }
 
     .button,
