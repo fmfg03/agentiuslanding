@@ -39,6 +39,20 @@ a {
     color: var(--action);
 }
 
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand img {
+    width: auto;
+    height: 52px;
+    max-height: 52px;
+    object-fit: contain;
+    object-position: left center;
+}
+
 .hero {
     border-bottom-color: var(--line);
 }
