@@ -12,6 +12,23 @@ This is an open framework. It is not a standard, certification, compliance schem
 
 Use it to map where AI-connected systems can act, what consequences those actions create, and what control posture each action requires before it reaches production.
 
+## Scope and Non-Goals
+
+This framework is a lightweight mapping method for agentic AI workflows.
+
+It does not replace:
+
+- Attack surface management.
+- Identity and access management.
+- Threat modeling.
+- AI risk management.
+- Security review.
+- Legal review.
+- Human oversight design.
+- Compliance assessment.
+
+It is intended to complement those practices by focusing on where AI-connected systems can exercise operational authority.
+
 ## 1. Core Definitions
 
 ### Authority Surface
@@ -34,7 +51,7 @@ The way authority expands through tools, APIs, workflows, memory, delegation, or
 
 Classify actions by what they let the system do, not by how impressive the model is.
 
-| Action Class | Meaning | Typical Control |
+| Action Class | Meaning | Typical Minimum Control |
 | --- | --- | --- |
 | READ | Access information | Privacy and access control |
 | WRITE | Modify records | Policy-bound validation |
@@ -104,7 +121,20 @@ Use one row per action, not one row per model.
 | Evidence | Log, receipt, signed receipt, replay bundle |
 | Drift trigger | What change requires remapping? |
 
-## 6. Worked Example: E-Commerce Refund Agent
+## 6. Change Triggers
+
+An authority surface must be remapped when any of the following changes:
+
+- A new tool or API is connected.
+- An existing tool receives broader permissions.
+- A model, prompt, policy, or workflow changes.
+- An action threshold changes.
+- A new customer segment or jurisdiction is added.
+- A human approval path is removed or weakened.
+- Downstream automation is added.
+- Memory or agent-to-agent delegation changes future behavior.
+
+## 7. Worked Example: E-Commerce Refund Agent
 
 | Field | Example Mapping |
 | --- | --- |
@@ -131,7 +161,7 @@ Use one row per action, not one row per model.
 | Issue refund above threshold | PAY | BR-4 | Human Approval |
 | Change refund policy | CONFIGURE | BR-5 | Block Default + Dual Control |
 
-## 7. Anti-Patterns
+## 8. Anti-Patterns
 
 Avoid these patterns:
 
@@ -145,7 +175,7 @@ Avoid these patterns:
 - Treating read, write, approve, pay, and release as equivalent tool calls.
 - Failing to remap after prompt, tool, model, workflow, or policy changes.
 
-## 8. Maturity Model
+## 9. Maturity Model
 
 | Level | Stage | Description |
 | --- | --- | --- |
@@ -155,7 +185,7 @@ Avoid these patterns:
 | 3 | Governed | Escalation, evidence, and block rules are assigned |
 | 4 | Enforced | Runtime gates and evidence receipts govern execution |
 
-## 9. Adoption Notes
+## 10. Adoption Notes
 
 Start small:
 
@@ -169,7 +199,7 @@ Start small:
 
 If a team cannot map the authority surface of a workflow, the workflow is not ready for high-autonomy execution.
 
-## 10. Open vs Proprietary Boundary
+## 11. Open vs Proprietary Boundary
 
 This framework is public and intentionally lightweight.
 
@@ -194,13 +224,13 @@ Implementation-specific:
 
 The framework should be usable without any particular vendor or runtime.
 
-## 11. Citation
+## 12. Citation
 
 Cite as:
 
 > Agentius / Zaubern. (2026). *Authority Surface Framework v0.1: A Practical Model for Mapping Operational Authority in Agentic AI Systems*. Retrieved from https://agentius.ai/research/authority-surface-framework/
 
-## 12. Relationship to the Whitepaper
+## 13. Relationship to the Whitepaper
 
 The whitepaper defines the category thesis. This framework is the practical adoption tool.
 
@@ -208,3 +238,23 @@ The whitepaper defines the category thesis. This framework is the practical adop
 - Framework: gives teams a method to map it.
 - Worksheet: turns the method into a repeatable operating artifact.
 
+## 14. License
+
+This framework is published under Creative Commons Attribution 4.0 International (CC BY 4.0), unless otherwise noted.
+
+You may share and adapt it with attribution to Agentius / Zaubern.
+
+## 15. Changelog
+
+### v0.1 - 2026-05-21
+
+Initial public draft defining:
+
+- Core Authority Surface terminology.
+- Action-class taxonomy.
+- Operational blast-radius levels.
+- Control posture ladder.
+- Mapping worksheet.
+- E-commerce refund agent example.
+- Anti-patterns.
+- Maturity model.
