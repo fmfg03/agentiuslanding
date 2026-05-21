@@ -1,24 +1,26 @@
 :root {
     --bg: #ffffff;
     --surface: #ffffff;
-    --surface-strong: #f4f6f8;
-    --ink: #101216;
-    --muted: #5d6673;
-    --line: rgba(16, 18, 22, 0.12);
-    --line-strong: rgba(16, 18, 22, 0.24);
-    --action: #f97316;
-    --action-soft: rgba(249, 115, 22, 0.1);
-    --authority: #2d35cc;
-    --authority-soft: rgba(45, 53, 204, 0.1);
+    --surface-strong: #F4F4F4;
+    --ink: #020818;
+    --muted: #4B4B4B;
+    --line: rgba(2, 8, 24, 0.12);
+    --line-strong: rgba(2, 8, 24, 0.24);
+    --action: #FF6A00;
+    --action-secondary: #FF8A00;
+    --gradient-bottom: #F95A00;
+    --action-soft: rgba(255, 106, 0, 0.1);
+    --authority: #020818;
+    --authority-soft: rgba(2, 8, 24, 0.1);
     --accent: var(--action);
     --accent-soft: var(--action-soft);
-    --warning: #c26a12;
+    --warning: #FF8A00;
     --danger: #a63d40;
-    --dark: #111318;
-    --dark-soft: #191d24;
+    --dark: #020818;
+    --dark-soft: #07111f;
     --dark-line: rgba(255, 255, 255, 0.14);
-    --success: #2d35cc;
-    --shadow: 0 18px 44px rgba(16, 18, 22, 0.08);
+    --success: #FF6A00;
+    --shadow: 0 18px 44px rgba(2, 8, 24, 0.08);
 }
 
 * {
@@ -34,7 +36,7 @@ body {
     min-width: 320px;
     background: var(--bg);
     color: var(--ink);
-    font-family: "Space Grotesk", sans-serif;
+    font-family: "Inter", sans-serif;
     line-height: 1.5;
 }
 
@@ -98,7 +100,7 @@ img {
     font-weight: 700;
     letter-spacing: 0.08em;
     font-size: 0.92rem;
-    color: var(--action);
+    color: var(--ink);
 }
 
 .brand-mark {
@@ -118,7 +120,7 @@ img {
 }
 
 .brand-wordmark {
-    color: var(--action);
+    color: var(--ink);
 }
 
 .site-nav {
@@ -179,8 +181,8 @@ img {
     overflow: hidden;
     background:
         linear-gradient(rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0.78)),
-        repeating-linear-gradient(90deg, rgba(45, 53, 204, 0.08) 0 1px, transparent 1px 96px),
-        repeating-linear-gradient(0deg, rgba(16, 18, 22, 0.05) 0 1px, transparent 1px 72px);
+        repeating-linear-gradient(90deg, rgba(2, 8, 24, 0.08) 0 1px, transparent 1px 96px),
+        repeating-linear-gradient(0deg, rgba(2, 8, 24, 0.05) 0 1px, transparent 1px 72px);
 }
 
 .hero-stack {
@@ -194,8 +196,8 @@ img {
     position: relative;
     padding: 88px 0 42px;
     background:
-        linear-gradient(135deg, rgba(45, 53, 204, 0.08), transparent 34%),
-        linear-gradient(315deg, rgba(249, 115, 22, 0.1), transparent 38%),
+        linear-gradient(135deg, rgba(2, 8, 24, 0.08), transparent 34%),
+        linear-gradient(315deg, rgba(255, 106, 0, 0.1), transparent 38%),
         var(--surface);
 }
 
@@ -267,9 +269,9 @@ img {
 
 .insight-brief:hover {
     transform: translateY(-2px);
-    border-color: rgba(45, 53, 204, 0.3);
+    border-color: rgba(2, 8, 24, 0.3);
     background:
-        linear-gradient(135deg, rgba(45, 53, 204, 0.035), rgba(249, 115, 22, 0.025)),
+        linear-gradient(135deg, rgba(2, 8, 24, 0.035), rgba(255, 106, 0, 0.025)),
         var(--surface);
 }
 
@@ -327,7 +329,7 @@ img {
     padding: 28px;
     border: 1px solid var(--line);
     background:
-        linear-gradient(135deg, rgba(45, 53, 204, 0.1), rgba(249, 115, 22, 0.08)),
+        linear-gradient(135deg, rgba(2, 8, 24, 0.1), rgba(255, 106, 0, 0.08)),
         var(--surface);
 }
 
@@ -346,8 +348,8 @@ img {
 .article-hero {
     padding: 72px 0 46px;
     background:
-        linear-gradient(135deg, rgba(45, 53, 204, 0.08), transparent 35%),
-        linear-gradient(315deg, rgba(249, 115, 22, 0.09), transparent 42%),
+        linear-gradient(135deg, rgba(2, 8, 24, 0.08), transparent 35%),
+        linear-gradient(315deg, rgba(255, 106, 0, 0.09), transparent 42%),
         var(--surface);
 }
 
@@ -467,7 +469,7 @@ img {
     padding: 24px;
     border-left: 4px solid var(--action);
     background:
-        linear-gradient(135deg, rgba(249, 115, 22, 0.08), rgba(45, 53, 204, 0.05)),
+        linear-gradient(135deg, rgba(255, 106, 0, 0.08), rgba(2, 8, 24, 0.05)),
         var(--surface);
 }
 
@@ -498,9 +500,9 @@ img {
 .map-gate {
     position: absolute;
     z-index: 1;
-    border: 1px solid rgba(16, 18, 22, 0.18);
+    border: 1px solid rgba(2, 8, 24, 0.18);
     background: rgba(255, 255, 255, 0.7);
-    color: rgba(16, 18, 22, 0.62);
+    color: rgba(2, 8, 24, 0.62);
     font-family: "IBM Plex Mono", monospace;
     font-size: 0.72rem;
     text-transform: uppercase;
@@ -511,7 +513,7 @@ img {
 .map-gate {
     left: 62%;
     top: 42%;
-    border-color: rgba(45, 53, 204, 0.44);
+    border-color: rgba(2, 8, 24, 0.44);
     color: var(--authority);
     background: rgba(255, 255, 255, 0.88);
 }
@@ -540,7 +542,7 @@ img {
     position: absolute;
     height: 1px;
     transform-origin: left center;
-    background: rgba(45, 53, 204, 0.2);
+    background: rgba(2, 8, 24, 0.2);
 }
 
 .line-a {
@@ -688,6 +690,11 @@ img {
 
 .button:hover {
     transform: translateY(-2px);
+}
+
+.button:active,
+.nav-cta:active {
+    transform: translateY(1px) scale(0.99);
 }
 
 .button-primary {
@@ -933,7 +940,7 @@ img {
 
 .comparison-head.emphasis,
 .comparison-cell.emphasis {
-    background: rgba(45, 53, 204, 0.16);
+    background: rgba(2, 8, 24, 0.16);
     color: #f4f6ff;
 }
 
@@ -1001,8 +1008,8 @@ img {
 }
 
 .actor-section {
-    border-top: 1px solid #000;
-    border-bottom: 1px solid #000;
+    border-top: 1px solid var(--ink);
+    border-bottom: 1px solid var(--ink);
 }
 
 .autonomy-table {
@@ -1135,7 +1142,7 @@ img {
     justify-content: flex-end;
     padding: 28px;
     background:
-        linear-gradient(145deg, rgba(249, 115, 22, 0.12), rgba(45, 53, 204, 0.08)),
+        linear-gradient(145deg, rgba(255, 106, 0, 0.12), rgba(2, 8, 24, 0.08)),
         var(--surface);
 }
 
@@ -1212,25 +1219,25 @@ img {
 
 .impact-low {
     --impact-scale: 0.72;
-    --impact-color: #2d35cc;
+    --impact-color: #020818;
 }
 
 .impact-medium {
     --impact-scale: 1;
-    --impact-color: #2d35cc;
-    background: rgba(45, 53, 204, 0.035);
+    --impact-color: #020818;
+    background: rgba(2, 8, 24, 0.035);
 }
 
 .impact-high {
     --impact-scale: 1.35;
-    --impact-color: #f97316;
-    background: rgba(249, 115, 22, 0.055);
+    --impact-color: #FF6A00;
+    background: rgba(255, 106, 0, 0.055);
 }
 
 .impact-critical {
     --impact-scale: 1.78;
     --impact-color: #d73b1f;
-    background: rgba(249, 115, 22, 0.1);
+    background: rgba(255, 106, 0, 0.1);
 }
 
 .proof-pressure {
@@ -1341,7 +1348,7 @@ img {
 
 .control-node.primary {
     background:
-        linear-gradient(145deg, rgba(45, 53, 204, 0.12), rgba(249, 115, 22, 0.08)),
+        linear-gradient(145deg, rgba(2, 8, 24, 0.12), rgba(255, 106, 0, 0.08)),
         var(--surface);
 }
 
@@ -1370,7 +1377,7 @@ img {
     padding: 30px;
     border-right: 1px solid var(--line);
     background:
-        linear-gradient(180deg, rgba(45, 53, 204, 0.06), rgba(255, 255, 255, 0)),
+        linear-gradient(180deg, rgba(2, 8, 24, 0.06), rgba(255, 255, 255, 0)),
         var(--surface);
 }
 
@@ -1539,8 +1546,8 @@ img {
     margin-top: 14px;
     padding: 14px 16px;
     border-radius: 6px;
-    background: rgba(45, 53, 204, 0.16);
-    border: 1px solid rgba(45, 53, 204, 0.38);
+    background: rgba(2, 8, 24, 0.16);
+    border: 1px solid rgba(2, 8, 24, 0.38);
     color: #dfe2ff;
 }
 
