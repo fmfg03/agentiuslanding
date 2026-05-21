@@ -90,7 +90,7 @@ img {
 }
 
 .site-header .shell {
-    min-height: 76px;
+    min-height: 96px;
 }
 
 .brand {
@@ -120,15 +120,15 @@ img {
 }
 
 .brand-horizontal {
-    width: 154px;
-    height: 52px;
+    width: 231px;
+    height: 78px;
     justify-content: flex-start;
 }
 
 .brand-horizontal img {
     width: auto;
-    height: 52px;
-    max-height: 52px;
+    height: 78px;
+    max-height: 78px;
     object-fit: contain;
     object-position: left center;
 }
