@@ -1,6 +1,6 @@
 # Integración Agentius V6 → Magnus, 2026-10-17
 
-Estado: candidato en rama/PR, sin despliegue. La recepción directa está **deshabilitada**.
+Estado: candidato en rama/PR, sin despliegue en producción. Cloudflare reporta una preview automática, sin acceso verificado (403 en la revisión). La recepción directa está **deshabilitada**.
 
 ## Procedencia
 
@@ -68,4 +68,10 @@ node scripts/verify-v6-browser.mjs
 
 Pendiente visual heredado: las fotografías contienen interfaces ilustrativas incrustadas.
 No se afirma que sean UI funcional ni que esta revisión cierre el rediseño V7.
-No se ha publicado, fusionado ni aplicado ninguna migración de producción.
+No se ha desplegado en producción, fusionado ni aplicado ninguna migración de producción.
+
+## Revisión reproducida posterior
+
+El informe `/tmp/agentius-magnus-review-20261017.md` verifica este V6 en SHA `53eaff23d723046dfc9c2828495e54f6055a918a` y Magnus `5437a99550c256ebe87dc3f951583a3ea371809f`: 48/48 enfocadas, 12/12 SQL y navegador escritorio/móvil aprobado con challenge/recibos simulados. Suite completa posterior: 200 aprobadas, 0 fallos, 1 omitida; el fallo externo anterior ya no se reproduce y no se modificó su manifiesto.
+
+Cloudflare reportó `https://a6bbfaa2.agentiuslanding.pages.dev/preview/v6/index.html`, pero la revisión obtuvo 403. No se verificó accesibilidad ni contenido servido. La propuesta de staging se documenta en Magnus PR #17, `docs/product/agentius-staging-proposal-20261017.md`; no se ha provisionado. Siguen pendientes HTTPS/proxy, aviso, Turnstile real y operador. Esta actualización solo modifica documentación; no vuelve a ejecutar pruebas ni habilita intake.
