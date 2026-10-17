@@ -1,0 +1,13 @@
+{
+  "diagnosticCatalog": {
+    "agentius-home-v6": {
+      "area": ["Operaciones", "Ventas", "Inventarios", "Finanzas y aprobaciones"],
+      "problem": ["Captura y recaptura manual", "Seguimiento tardío", "Errores o inconsistencias", "Validaciones y aprobaciones"],
+      "frequency": ["diario", "semanal", "ocasional"]
+    }
+  },
+  "offerCatalog": {
+    "agentius-home-v6": ["automatizacion-operativa", "seguimiento-comercial", "inventarios-trazabilidad"]
+  },
+  "noticeVersions": []
+}
